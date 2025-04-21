@@ -8783,7 +8783,10 @@ figcaption {
 }
 
 .new-button-text {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+
+
 }
 
 .button-arrow-wrap {
