@@ -1719,12 +1719,12 @@ textarea.w-select {
   float: right;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
+  -tap-highlight-color: transparent;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 18px;
-  font-size: 24px;
+  padding: 5px;
+  font-size: 12px;
   display: none;
   position: relative;
 }
@@ -1733,7 +1733,9 @@ textarea.w-select {
 }
 .w-nav-button.w--open {
   color: #fff;
-  background-color: #c8c8c8;
+  background-color: #b9a8ff;
+  border-radius: 25px;
+  justify-content: center;
 }
 .w-nav[data-collapse="all"] .w-nav-menu {
   display: none;
@@ -1924,7 +1926,7 @@ textarea.w-select {
   border-color: #3898ec;
 }
 body {
-  color: var(--colors--grey);
+  color: white
   letter-spacing: 0.2px;
   font-family: SF Pro Display, sans-serif;
   font-size: 1.125rem;
@@ -3302,6 +3304,11 @@ figcaption {
 }
 
 @media (max-width: 768px) {
+  .services-grid-TT {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 4 columns in a row */
+    gap: 01rem; /* Adjust spacing as needed */
+  }
   .services-grid {
     grid-template-columns: 1fr; /* 1 card per row on mobile */
   }
@@ -4422,17 +4429,16 @@ figcaption {
   display: inline-block;
 }
 
-
 /* Section Container */
 .lw-registration-process {
-  padding: 4rem 0rem 0rem 0rem;
-  /* background-color: #000000; */
+  padding: 4rem 1rem 0rem 1rem;
   text-align: center;
 }
 
 .lw-container {
-  /* max-width: 2000px; */
   margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 1rem;
 }
 
 /* Section Title */
@@ -4444,7 +4450,7 @@ figcaption {
 }
 
 .lw-section-title .highlight {
-  color: #6a1b9a; /* Highlight color */
+  color: #6a1b9a;
 }
 
 /* Steps Grid */
@@ -4455,44 +4461,51 @@ figcaption {
   text-align: left;
 }
 
-/* Team Section Styles */
-.lw-team-section {
-  padding: 4rem 1rem;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.lw-container {
-  min-width: 1600px;
-  margin: 0 auto;
-  /* background-color: #000; */
-}
-
-/* Section Title */
-.lw-section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #333333;
-}
-
-/* Team Grid */
-.lw-team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+/* Responsive Layout for Steps Grid */
+@media (max-width: 1200px) {
+  .lw-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 991px) {
-  .lw-team-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  .lw-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 767px) {
-  .lw-team-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+@media (max-width: 600px) {
+  .lw-steps-grid {
+    grid-template-columns: 1fr;
   }
+}
+
+/* Individual Step Card Styling (Optional if not already styled) */
+.lw-step-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Step Number */
+.lw-step-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5548e1;
+}
+
+/* Step Title */
+.lw-step-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* Caption */
+.lw-caption {
+  font-weight: 500;
+  color: #333;
 }
 
 /* Team Card */
@@ -8351,22 +8364,32 @@ figcaption {
 .advertiser-logo {
   font-size: 24px; /* Adjust the size as needed */
   color: #000; /* Set the desired color */
+}.aptable {
+  padding: 2rem 1rem;
 }
 
 .ap-table-wrapper {
   overflow-x: auto;
   margin: 40px 0;
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  /* box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06); */
   background-color: #ffffff;
+
 }
 
+/* Base Table Styling */
 .ap-table {
   width: 100%;
+  min-width: 800px; /* ensures scroll on small screens */
   border-collapse: collapse;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  /* font-family: 'Inter', 'Segoe UI', sans-serif; */
   font-size: 14px;
   color: #1a1f36;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  
 }
 
 .ap-table thead {
@@ -8375,7 +8398,6 @@ figcaption {
 }
 
 .ap-table th {
-  text-align: left;
   padding: 16px 20px;
   font-weight: 800;
   color: #ffffff;
@@ -8413,10 +8435,87 @@ figcaption {
   text-decoration: underline;
 }
 
-.aptable{
-  /* background-color: #000; */
-  padding: 1rem 19rem 1rem 20rem;
+/* Responsive Enhancements */
+@media (max-width: 2200px) {
+
+  .ap-table-wrapper {
+
+
+    padding: 0rem 11rem 0rem 11rem;
+  }
+  .aptable {
+    padding: 2rem;
+  }
+
+  .ap-table th, .ap-table td {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
 }
+
+@media (max-width: 767px) {
+
+  .ap-table-wrapper {
+
+
+    padding: 0rem 0rem 0rem 0rem;
+  }
+  .aptable {
+    padding: 1rem;
+  }
+
+  .ap-table th, .ap-table td {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .ap-table {
+    font-size: 13px;
+
+
+  }
+}
+
+/* Scroll Hint Box */
+.ap-scroll-hint {
+  display: none; /* hidden by default */
+  margin-top: 1rem;
+  background-color: #f0f4ff;
+  border: 2px solid #5548e1;
+  color: #333;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.ap-scroll-arrow {
+  font-size: 1.2rem;
+  margin-top: 0.25rem;
+  animation: bounce-right 1.5s infinite;
+}
+
+/* Arrow Animation */
+@keyframes bounce-right {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+/* Show only on small screens */
+@media (max-width: 767px) {
+  .ap-scroll-hint {
+    display: block;
+  }
+}
+
 
 .about-lapis-section {
   padding: 4rem 1rem;
@@ -8637,15 +8736,8 @@ figcaption {
   opacity: 0.9;            /* Add a fade effect */
 }
 
-.new-navbar-link.w--current {
-  background-color: #5548e1;
-  color: var(--colors--white);
-}
 
-.new-navbar-link.w--current:hover {
-  opacity: 1;  /* Ensure no fading when the link is active */
-  transform: none;  /* Remove scaling effect for active link */
-}
+
 
 
 .new-navbar-button-wrapper {
@@ -8658,7 +8750,7 @@ figcaption {
 }
 
 .new-navbar-link-wrapper {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   border-radius: 40px;
   padding: 0.25rem;
   display: flex;
@@ -8717,11 +8809,22 @@ figcaption {
   }
   
   .new-button-text {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   
   .new-button-arrow {
     width: 16px;
     height: 16px;
   }
+
+  .new-navbar-link {
+
+    font-size: 0.5rem;
+
+  }
+  .w-nav-link {
+   font-size: 0.5rem;
+  }
+
+  
 }
