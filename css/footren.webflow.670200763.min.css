@@ -2363,7 +2363,7 @@ figcaption {
 }
 .heading-style-h3 {
   color: var(--colors--black);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -3644,113 +3644,119 @@ figcaption {
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-}
-.case-studies-grid {
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 1.5rem;
-  text-align: left;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: grid;
-}
-.case-studies-card {
-  background-color: #f1f1f1;
-  border-radius: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 1.5rem;
-  color: var(--colors--black);
-  flex-flow: column;
-  text-decoration: none;
-  display: flex;
-}
-.case-studies-image-wrap {
-  border-radius: 12px;
-  overflow: hidden;
-}
-.case-study-image {
-  object-fit: cover;
-  border-radius: 32px;
-  width: 100%;
-  height: 25rem;
-}
-.case-study-image.smaller {
-  height: 18.875rem;
-}
+  }
+  .case-studies-grid {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    text-align: left;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+  }
+  .case-studies-card {
+    background-color: #f1f1f1;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    color: var(--colors--black);
+    flex-flow: column;
+    text-decoration: none;
+    display: flex;
+    transition: background-color 0.3s ease; /* smooth animation */
+  }
 
-.toggle-buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
+  .case-studies-card:hover {
+    background-color: #499BF8; /* Change to any color you like */
+  }
 
-.toggle-btn {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-radius: 32px;
-  padding: 0.75rem 1.5rem;
-  margin: 0 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
+  .case-studies-image-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .case-study-image {
+    object-fit: cover;
+    border-radius: 32px;
+    width: 100%;
+    height: 25rem;
+  }
+  .case-study-image.smaller {
+    height: 18.875rem;
+  }
 
-.toggle-btn:hover {
-  background-color: #b7b0ff;
-  color: #ffffff;
-  transform: translateY(-1px); /* Adds a slight "lift" effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01); /* Adds a shadow for depth */
-}
+  .toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
 
-.toggle-btn:active {
-  transform: translateY(0); /* Removes the lift effect when clicked */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
-}
+  .toggle-btn {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 32px;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
 
-.toggle-btn.active {
-  background-color: #b7b0ff;
-  color: white;
-}
+  .toggle-btn:hover {
+    background-color: #b7b0ff;
+    color: #ffffff;
+    transform: translateY(-1px); /* Adds a slight "lift" effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01); /* Adds a shadow for depth */
+  }
 
+  .toggle-btn:active {
+    transform: translateY(0); /* Removes the lift effect when clicked */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+  }
 
-.toggle-btn2 {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-radius: 32px;
-  padding: 0.75rem 1.5rem;
-  /* margin: 0 0.5rem; */
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.toggle-btn2:hover {
-  background-color: #5548e1;
-  color: #ffffff;
-  transform: translateY(-1px); /* Adds a slight "lift" effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01); /* Adds a shadow for depth */
-}
-
-.toggle-btn2:active {
-  transform: translateY(0); /* Removes the lift effect when clicked */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
-}
-
-.toggle-btn2.active {
-  background-color: #5548e1;
-  color: white;
-}
+  .toggle-btn.active {
+    background-color: #b7b0ff;
+    color: white;
+  }
 
 
-.case-studies-grid.hidden {
-  display: none;
-}
+  .toggle-btn2 {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 32px;
+    padding: 0.75rem 1.5rem;
+    /* margin: 0 0.5rem; */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
 
-.left-spacing{
-  margin-left: -5rem;
-}
+  .toggle-btn2:hover {
+    background-color: #5548e1;
+    color: #ffffff;
+    transform: translateY(-1px); /* Adds a slight "lift" effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01); /* Adds a shadow for depth */
+  }
+
+  .toggle-btn2:active {
+    transform: translateY(0); /* Removes the lift effect when clicked */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+  }
+
+  .toggle-btn2.active {
+    background-color: #5548e1;
+    color: white;
+  }
+
+
+  .case-studies-grid.hidden {
+    display: none;
+  }
+
+  .left-spacing{
+    margin-left: -5rem;
+  }
 
 /* Section Styles */
 .lw-feature-section {
@@ -4417,6 +4423,7 @@ figcaption {
   gap: 8px;
   margin-bottom: 1rem;
 
+
 }
 
 .card-tag {
@@ -4427,6 +4434,7 @@ figcaption {
   border-radius: 12px;
   padding: 4px 12px;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 /* Section Container */
@@ -4614,7 +4622,7 @@ figcaption {
 
 /* Step Title */
 .lw-step-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: bold;
   color: #5548E1;
@@ -4622,7 +4630,7 @@ figcaption {
   margin-top: -10rem; /* Pull the title upward to overlap the number */
   position: absolute;
   top: 42%;
-  left: 40%;
+  left: 35%;
   right: -3rem;
   transform: translate(-20%, -50%);
   z-index: 2; /* Ensures the title is above the number */
@@ -8393,7 +8401,7 @@ figcaption {
 }
 
 .ap-table thead {
-  background-color: #4163CE;
+  background-color: #4433c1;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -8414,7 +8422,7 @@ figcaption {
 }
 
 .ap-table tbody tr:hover {
-  background-color: #cdc8ff;
+  background-color: #c0ddff;
 }
 
 .ap-table td:first-child {
@@ -8582,7 +8590,7 @@ figcaption {
 
 .about-lapis-featured-section {
   padding: 4rem 1rem;
-  background-color: #f7f8fc;
+  /* background-color: #f7f8fc; */
   text-align: center;
 }
 
@@ -8595,7 +8603,7 @@ figcaption {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #111;
+  color: #ffffff;
 }
 
 .about-lapis-center-image img {
